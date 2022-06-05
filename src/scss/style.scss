@@ -9,19 +9,18 @@
 @use "layout/l-header";
 @use "layout/l-footer";
 @use "layout/l-container";
+@use "layout/l-home";
 
 /* Component (prefix: c- )
    ----------------------------------------------------------------- */
 @use "component/c-button-primary";
 
-
 /* Project (prefix: p- )
    ----------------------------------------------------------------- */
 @use "project/p-header";
+@use "project/p-registration";
+@use "project/p-mv";
 @use "project/p-footer";
-@use "project/p-global-nav";
-@use "project/p-first-view";
-
 
 /* Utitlity (prefix: u- )
    ----------------------------------------------------------------- */

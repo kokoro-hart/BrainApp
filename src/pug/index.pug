@@ -4,3 +4,24 @@ block page
 
 block main
   main.l-main
+    section.p-mv.l-home__mv 
+      .p-mv__inner.l-container
+        include ./svg/_circle.pug
+        include ./svg/_circle.pug 
+        .p-mv__mockups
+          picture.p-mv__mockup.p-mv__mockup--pc
+            source.p-mv__img(srcset="../img/mv01.webp", type="image/webp")
+            img.p-mv__img(src="../img/mv01.png")
+          picture.p-mv__mockup.p-mv__mockup--sp
+            source.p-mv__img(srcset="../img/mv02.webp", type="image/webp")
+            img.p-mv__img(src="../img/mv02.png")
+        .p-mv__content 
+          h2.p-mv__heading
+            | どこにいても、
+            br.u-hidden-md-down
+            | 誰といても、
+            br
+            span
+              | がん・生活習慣病予防
+          p.p-mv__lead
+            | 生活習慣予防できるアプリ

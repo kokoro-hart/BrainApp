@@ -6,13 +6,13 @@
 // <p class="u-hidden-lg-down">lg値より狭い幅で非表示</p>
 
 @each $bp in map-keys($screen) {
-  .u-hidden-#{$bp}-up {
-    @include mq($bp, min) {
+  .u-hidden-#{$bp}-down {
+    @include mq($bp, max) {
       display: none;
     }
   }
 
-  .u-hidden-#{$bp}-down {
+  .u-hidden-#{$bp}-up {
     @include mq($bp) {
       display: none;
     }

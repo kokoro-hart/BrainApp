@@ -1,2 +1,18 @@
 header.l-header.p-header 
-  
+  .p-header__inner.l-container 
+    h1.p-header__logo 
+      a.p-header__logo-link(href="/") 
+        include ../svg/_logo.pug
+        span.p-header__logo-text 
+          | Brain App 
+    .p-header__registration.p-registration
+      button.p-registration__button.p-registration__button--login
+        include ../svg/_login.pug
+        span.p-registration__button-text 
+          | ログイン
+      button.p-registration__button.p-registration__button--member
+        include ../svg/_human.pug
+        span.p-registration__button-text 
+          | 会員登録
+      button.p-registration__button.p-registration__button--mail
+        include ../svg/_mail.pug

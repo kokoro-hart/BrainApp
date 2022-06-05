@@ -1,0 +1,10 @@
+@use "../global" as *;
+
+/* layout .l-home
+   ----------------------------------------------------------------- */
+
+.l-home__mv {
+  width: 100%;
+  @include clampFunction("padding-top", 769, 1280, 42, 95);
+  @include clampFunction("padding-bottom", 769, 1280, 42, 95);
+}

@@ -1,0 +1,141 @@
+@use "../global" as *;
+
+/* project .p-mv
+   ----------------------------------------------------------------- */
+
+.p-mv__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+  @include mq(md) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+
+.p-mv__svg {
+  display: inline-block;
+  position: absolute;
+  z-index: -1;
+  &:nth-of-type(1) {
+    top: -30%;
+    left: 0;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    @include clampFunction("width", 769, 1280, 400, 800);
+    @include clampFunction("height", 769, 1280, 400, 800);
+
+    @include mq(sm) {
+      top: -20%;
+    }
+
+    @include mq(md) {
+      top: -47%;
+      left: 2%;
+    }
+  }
+  &:nth-of-type(2) {
+    top: 50%;
+    right: 0;
+    transform: translateX(50%);
+    @include clampFunction("width", 769, 1280, 300, 600);
+    @include clampFunction("height", 769, 1280, 300, 600);
+
+    @include mq(md) {
+      top: -8%;
+    }
+  }
+}
+
+.p-mv__mockups {
+  position: relative;
+  padding-top: 68%;
+  @include mq(md) {
+    width: calc(55% - (7% + 5.5%) / 2);
+    height: 100%;
+    padding-top: 33%;
+  }
+}
+
+.p-mv__mockup {
+  position: absolute;
+  display: block;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    box-shadow: $box-shadow;
+    pointer-events: none;
+  }
+}
+
+.p-mv__mockup--pc {
+  top: 0;
+  @include mq(md) {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+}
+
+.p-mv__mockup--sp {
+  top: 0;
+  right: -1.5%;
+  transform: translateY(43%);
+  width: 26%;
+
+  @include mq(md) {
+    right: -5.5%;
+  }
+}
+
+.p-mv__content {
+  padding-bottom: 32px;
+  @include mq(md) {
+    width: calc(45% - 7% / 2);
+  }
+}
+
+.p-mv__heading {
+  @include clampFunction("font-size", 769, 1280, 24, 32);
+  @include lh(2.5);
+  font-weight: 700;
+  letter-spacing: 1px;
+  white-space: nowrap;
+
+  @include mq(md) {
+    letter-spacing: 2.4px;
+  }
+
+  span {
+    color: $color-accent;
+    @include clampFunction("font-size", 769, 1280, 28, 38);
+  }
+}
+
+.p-mv__lead {
+  position: relative;
+  width: 100%;
+  @include clampFunction("padding-left", 769, 1280, 71, 142);
+  @include clampFunction("font-size", 769, 1280, 18, 20);
+  @include lh(1.7);
+  letter-spacing: 1.2px;
+  white-space: nowrap;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    @include clampFunction("width", 769, 1280, 59, 119);
+    height: 1px;
+    background-color: $color-gray;
+  }
+}

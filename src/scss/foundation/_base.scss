@@ -45,17 +45,10 @@ input {
   line-height: 1.4;
 }
 
-.site-wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
 main {
-  flex: 1;
   width: 100%;
   z-index: map-get($layer, main);
-  overflow-x: hidden;
+  //overflow-x: hidden;
 }
 
 a {
@@ -160,4 +153,10 @@ button:focus {
 :focus:not(:focus-visible),
 :focus:not(:focus-visible) + label {
   outline: 0; //キーボード操作"以外"でフォーカスされた際はoutlineを消す
+}
+
+br {
+  content: "";
+  height: 0;
+  display: block;
 }

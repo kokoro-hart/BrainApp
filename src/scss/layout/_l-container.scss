@@ -4,12 +4,11 @@
    ----------------------------------------------------------------- */
 
 .l-container {
-  color: $color-primary;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-right:14px;
-  padding-left: 14px;
+  padding-right: 20px;
+  padding-left: 20px;
 
   @include mq(md) {
     max-width: 1280px;

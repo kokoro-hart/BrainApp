@@ -1,0 +1,70 @@
+@use "../global" as *;
+
+/* project .p-registration 
+   ----------------------------------------------------------------- */
+
+.p-registration {
+  display: flex;
+  align-items: center;
+}
+
+.p-registration__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 27px;
+  width: 105px;
+  padding: 8px 6px;
+
+  @include mq(md) {
+    border-radius: 27px;
+    width: 154px;
+    padding: 13px 10px;
+  }
+
+  &:not(:first-child) {
+    margin-left: 8px;
+
+    @include mq(md) {
+      margin-left: 20px;
+    }
+  }
+  svg {
+    width: 14px;
+
+    @include mq(md) {
+      width: 18px;
+    }
+  }
+}
+
+.p-registration__button-text {
+  margin-left: 8px;
+  color: $color-base;
+  @include fz(12, 14);
+  @include lh(1.2);
+
+  @include mq(md) {
+    margin-left: 11px;
+  }
+}
+
+.p-registration__button--login {
+  background-color: $color-gray;
+}
+
+.p-registration__button--member {
+  background-color: $color-accent;
+}
+
+.p-registration__button--mail {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: $color-accent;
+
+  @include mq(md) {
+    width: 44px;
+    height: 44px;
+  }
+}
