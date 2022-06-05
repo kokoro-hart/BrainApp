@@ -3,7 +3,8 @@ block page
   - var page = 'home';
 
 block main
-  main.l-main
+  main.l-home
+    //- メインビジュアル
     section.p-mv.l-home__mv 
       .p-mv__inner.l-container
         include ./svg/_circle.pug
@@ -25,3 +26,23 @@ block main
               | がん・生活習慣病予防
           p.p-mv__lead
             | 生活習慣予防できるアプリ
+    //- Brain Appについて
+    section.p-about.l-home__about 
+      .p-about__inner.l-container 
+        .p-about__content 
+          p.c-section-title 
+            | About Brain App
+          h2.p-about__heading.c-section-heading
+            | #[span Brain App]とは、
+            br
+            | 生活習慣病の早期発見を
+            br
+            | サポートする医療認定アプリです。
+          p.p-about__text 
+            |  道路の位置も幾たびか改まったもので、 
+            br
+            | 古道はいつのまにか深い山間に埋も木曾路はすべて山の中である。
+        .p-about__graph 
+          picture.p-about__picture
+            source.p-about__img(srcset="../img/graph.webp", type="image/webp")
+            img.p-about__img(src="../img/graph.png")

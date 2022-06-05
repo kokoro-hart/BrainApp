@@ -1,0 +1,14 @@
+@use "../global" as *;
+
+/* component .c-section-heading
+   ----------------------------------------------------------------- */
+
+.c-section-heading {
+  @include clampFunction("font-size", 769, 1280, 22, 28);
+  @include lh(2);
+  letter-spacing: 0.07em;
+  font-weight: 700;
+  span {
+    color: $color-accent;
+  }
+}

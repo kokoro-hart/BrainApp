@@ -8,3 +8,8 @@
   @include clampFunction("padding-top", 769, 1280, 42, 95);
   @include clampFunction("padding-bottom", 769, 1280, 42, 95);
 }
+
+.l-home__about {
+  @include clampFunction("padding-top", 769, 1280, 75, 142);
+  @include clampFunction("padding-bottom", 769, 1280, 58, 118);
+}

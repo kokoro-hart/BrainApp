@@ -1,0 +1,11 @@
+@use "../global" as *;
+
+/* component .c-section-title
+   ----------------------------------------------------------------- */
+
+.c-section-title {
+  color: $color-accent;
+  @include fz(12);
+  @include lh(1);
+  letter-spacing: 0.3px;
+}

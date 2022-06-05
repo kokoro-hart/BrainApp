@@ -14,12 +14,15 @@
 /* Component (prefix: c- )
    ----------------------------------------------------------------- */
 @use "component/c-button-primary";
+@use "component/c-section-title";
+@use "component/c-section-heading";
 
 /* Project (prefix: p- )
    ----------------------------------------------------------------- */
 @use "project/p-header";
 @use "project/p-registration";
 @use "project/p-mv";
+@use "project/p-about";
 @use "project/p-footer";
 
 /* Utitlity (prefix: u- )
