@@ -36,7 +36,7 @@
     }
   }
   &:nth-of-type(2) {
-    top: 50%;
+    top: 73%;
     right: 0;
     transform: translateX(50%);
     @include clampFunction("width", 769, 1280, 300, 600);
@@ -50,11 +50,12 @@
 
 .p-mv__mockups {
   position: relative;
+  width: 98%;
   padding-top: 68%;
   @include mq(md) {
-    width: calc(55% - (7% + 5.5%) / 2);
+    width: calc(58% - (7% + 5.5%) / 2);
     height: 100%;
-    padding-top: 33%;
+    padding-top: 35%;
   }
 }
 
@@ -98,20 +99,16 @@
 .p-mv__content {
   padding-bottom: 32px;
   @include mq(md) {
-    width: calc(45% - 7% / 2);
+    width: calc(42% - 7% / 2);
   }
 }
 
 .p-mv__heading {
   @include clampFunction("font-size", 769, 1280, 24, 32);
-  @include lh(2.5);
+  @include lh(2.3);
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 0.07em;
   white-space: nowrap;
-
-  @include mq(md) {
-    letter-spacing: 2.4px;
-  }
 
   span {
     color: $color-accent;
@@ -122,6 +119,7 @@
 .p-mv__lead {
   position: relative;
   width: 100%;
+  margin-top: 4px;
   @include clampFunction("padding-left", 769, 1280, 71, 142);
   @include clampFunction("font-size", 769, 1280, 18, 20);
   @include lh(1.7);
