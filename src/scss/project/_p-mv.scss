@@ -3,6 +3,40 @@
 /* project .p-mv
    ----------------------------------------------------------------- */
 
+.p-mv {
+  svg {
+    display: inline-block;
+    position: absolute;
+    z-index: -1;
+    &:nth-of-type(1) {
+      top: -30%;
+      left: 0;
+      transform: translate(-50%, -50%) rotate(-90deg);
+      @include clampFunction("width", 769, 1280, 400, 800);
+      @include clampFunction("height", 769, 1280, 400, 800);
+
+      @include mq(sm) {
+        top: -20%;
+      }
+
+      @include mq(md) {
+        top: -47%;
+        left: 2%;
+      }
+    }
+    &:nth-of-type(2) {
+      top: 73%;
+      right: 0;
+      transform: translateX(50%);
+      @include clampFunction("width", 769, 1280, 300, 600);
+      @include clampFunction("height", 769, 1280, 300, 600);
+
+      @include mq(md) {
+        top: -8%;
+      }
+    }
+  }
+}
 .p-mv__inner {
   position: relative;
   display: flex;
@@ -12,39 +46,6 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
-  }
-}
-
-.p-mv__svg {
-  display: inline-block;
-  position: absolute;
-  z-index: -1;
-  &:nth-of-type(1) {
-    top: -30%;
-    left: 0;
-    transform: translate(-50%, -50%) rotate(-90deg);
-    @include clampFunction("width", 769, 1280, 400, 800);
-    @include clampFunction("height", 769, 1280, 400, 800);
-
-    @include mq(sm) {
-      top: -20%;
-    }
-
-    @include mq(md) {
-      top: -47%;
-      left: 2%;
-    }
-  }
-  &:nth-of-type(2) {
-    top: 73%;
-    right: 0;
-    transform: translateX(50%);
-    @include clampFunction("width", 769, 1280, 300, 600);
-    @include clampFunction("height", 769, 1280, 300, 600);
-
-    @include mq(md) {
-      top: -8%;
-    }
   }
 }
 
