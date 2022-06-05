@@ -52,7 +52,9 @@
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.9.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "tween24": "^1.4.0"
+  },
   "browserslist": [
     "> 0.2%, not dead",
     "not IE 11"
