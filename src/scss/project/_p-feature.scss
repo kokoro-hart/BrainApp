@@ -1,0 +1,115 @@
+@use "../global" as *;
+
+/* project .p-feature
+   ----------------------------------------------------------------- */
+
+.p-feature {
+  background: linear-gradient($color-gray-thin 80%, transparent 80%);
+}
+
+.p-feature__heading {
+  margin-top: 18px;
+
+  @include mq(md) {
+    margin-top: 24px;
+  }
+}
+
+.p-feature__text {
+  margin-top: 18px;
+  @include fz(14, 16);
+  @include lh(2);
+  letter-spacing: 0.07em;
+
+  @include mq(md) {
+    margin-top: 24px;
+  }
+}
+
+.p-feature__cards {
+  margin-top: 32px;
+
+  @include mq(md) {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 62px;
+  }
+}
+
+.p-feature__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid $color-gray-thin;
+  border-radius: 0px 0px 72px 0px;
+  padding: 42px 18px 28px 18px;
+  background-color: $color-base;
+
+  @include mq(md) {
+    border-radius: 0px 0px 96px 0px;
+    width: calc(33.33% - 3% * 2 / 3);
+    padding: 64px 24px 36px 24px;
+  }
+
+  &:not(:first-child) {
+    margin-top: 32px;
+
+    @include mq(md) {
+      margin-top: 0;
+    }
+  }
+}
+
+.p-feature__card-number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 0px 0px 11px 0px;
+  background-color: $color-accent;
+  padding: 8px 22px;
+  color: $color-base;
+  font-weight: 700;
+  @include fz(20, 24);
+
+  @include mq(md) {
+    border-radius: 0px 0px 13px 0px;
+    padding: 10px 24px;
+  }
+}
+
+.p-feature__card-picture {
+  width: 35%;
+
+  @include mq(md) {
+    width: 45%;
+  }
+
+  @include mq(lg) {
+    width: 35%;
+  }
+}
+
+.p-feature__card-title {
+  margin-top: 24px;
+  color: $color-accent;
+  @include fz(18, 20);
+  @include lh(1.7);
+  letter-spacing: 0.07em;
+  font-weight: 700;
+
+  @include mq(md) {
+    margin-top: 32px;
+  }
+}
+
+.p-feature__card-text {
+  margin-top: 10px;
+  @include fz(14, 15);
+  @include lh(2);
+  letter-spacing: 0.07em;
+
+  @include mq(md) {
+    margin-top: 14px;
+  }
+}
