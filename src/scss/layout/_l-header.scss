@@ -1,0 +1,14 @@
+@use "../global" as *;
+
+/* layout .l-header
+   ----------------------------------------------------------------- */
+
+.l-header {
+  width: 100%;
+  height: 60px;
+  color: $color-primary;
+
+  @include mq(md) {
+    height: 80px;
+  }
+}
