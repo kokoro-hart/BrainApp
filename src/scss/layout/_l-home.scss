@@ -13,3 +13,20 @@
   @include clampFunction("padding-top", 769, 1280, 75, 142);
   @include clampFunction("padding-bottom", 769, 1280, 58, 118);
 }
+
+.l-home__feature {
+  padding-top: 38px;
+
+  @include mq(md) {
+    padding-top: 74px;
+  }
+}
+
+.l-home__scene {
+  padding-top: 42px;
+  @include clampFunction("padding-bottom", 769, 1280, 86, 172);
+  
+  @include mq(md) {
+    padding-top: 86px;
+  }
+}

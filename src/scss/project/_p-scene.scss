@@ -1,0 +1,82 @@
+@use "../global" as *;
+
+/* project .p-scene
+   ----------------------------------------------------------------- */
+
+.p-scene {
+  text-align: center;
+
+  svg {
+    position: absolute;
+    bottom: 0;
+    left: -36%;
+    z-index: -1;
+    @include clampFunction("width", 769, 1280, 500, 600);
+    @include clampFunction("height", 769, 1280, 500, 600);
+    transform: translateY(50%) rotate(90deg);
+
+    @include mq(md) {
+      bottom: -19%;
+      left: -36%;
+    }
+  }
+}
+
+.p-scene__inner {
+  position: relative;
+}
+
+.p-scene__heading {
+  margin-top: 20px;
+
+  @include mq(md) {
+    margin-top: 24px;
+  }
+}
+
+.p-scene__cards {
+  margin-top: 42px;
+
+  @include mq(md) {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+  }
+}
+
+.p-scene__card {
+  @include mq(md) {
+    width: calc(33.3% - 7% * 2 / 3);
+  }
+
+  &:not(:first-child) {
+    margin-top: 40px;
+
+    @include mq(md) {
+      margin-top: 0;
+    }
+  }
+}
+
+.p-scene__card-picture {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+
+  @include mq(md) {
+    width: 100%;
+  }
+}
+
+.p-scene__card-title {
+  margin-top: 18px;
+  @include fz(14, 16);
+  @include lh(2);
+  font-weight: 700;
+  letter-spacing: 0.07em;
+
+  @include mq(md) {
+    margin-top: 30px;
+  }
+}
