@@ -1,0 +1,81 @@
+@use "../global" as *;
+
+/* project .p-result 
+   ----------------------------------------------------------------- */
+
+.p-result {
+  background-color: $color-accent;
+  color: $color-base;
+}
+
+.p-result__inner {
+  @include mq(md) {
+    display: grid;
+    grid-template-columns: 60.5% 32.5%;
+    grid-template-rows: 1fr auto;
+    grid-column-gap: 7%;
+    grid-row-gap: 0px;
+  }
+
+  @include mq(lg) {
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  @include mq(1280, min) {
+    padding-right: 0;
+  }
+}
+
+.p-result__content {
+  @include mq(md) {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+}
+
+.p-result__heading {
+  margin-top: 20px;
+  color: $color-base;
+
+  @include mq(md) {
+    margin-top: 24px;
+  }
+}
+
+.p-result__text {
+  margin-top: 18px;
+  @include fz(14, 16);
+  @include lh(2);
+  letter-spacing: 0.07em;
+
+  @include mq(md) {
+    margin-top: 24px;
+  }
+}
+
+.p-result__improvement {
+  max-width: 733px;
+  width: 100%;
+  margin-top: 32px;
+
+  @include mq(md) {
+    grid-area: 2 / 1 / 3 / 3;
+  }
+
+  @include mq(lg) {
+    margin-top: 42px;
+    grid-area: 2 / 1 / 3 / 2;
+  }
+}
+
+.p-result__img-wrapper {
+  margin-top: 32px;
+
+  @include mq(md) {
+    margin-top: 0;
+    grid-area: 1 / 2 / 2 / 3;
+  }
+
+  @include mq(lg) {
+    grid-area: 1 / 2 / 3 / 3;
+  }
+}

@@ -88,3 +88,73 @@ block main
               | 医療認定のレポート
             p.p-feature__card-text
               | 木を伐って並べ、藤づるでからめ、それで街道の狭いのを補った。長い間にこの木曾路に起こって来た変化は、いくらかずつでも嶮岨な山坂の多いところを歩きよくした。
+    //- Use Scene 使用シーン
+    section.p-scene.l-home__scene
+      .p-scene__inner.l-container 
+        include ./svg/_circle.pug 
+        p.c-section-title 
+          | Use Scene
+        h2.p-scene__heading.c-section-heading 
+          | #[span アクティブシニア]の方を中心に 
+          br.u-hidden-md-down
+          | ご利用いただいております
+        ul.p-scene__cards
+          li.p-scene__card 
+            picture.p-scene__card-picture
+              source.p-scene__card-img(srcset="../img/use-scene01.webp", type="image/webp")
+              img.p-scene__card-img(src="../img/use-scene01.png")
+            h3.p-scene__card-title
+              | 生活習慣病対策施策として
+          li.p-scene__card 
+            picture.p-scene__card-picture
+              source.p-scene__card-img(srcset="../img/use-scene02.webp", type="image/webp")
+              img.p-scene__card-img(src="../img/use-scene02.png")
+            h3.p-scene__card-title
+              | ヨガ・ストレッチの一環として
+          li.p-scene__card 
+            picture.p-scene__card-picture
+              source.p-scene__card-img(srcset="../img/use-scene03.webp", type="image/webp")
+              img.p-scene__card-img(src="../img/use-scene03.png")
+            h3.p-scene__card-title
+              | アクティブシニア向けの
+              br
+              | 老後介護として
+    //- Result 実績
+    section.p-result.l-home__result
+      .p-result__inner.l-container
+        .p-result__content
+          p.p-result__heading.c-section-title
+            | Result 
+          h2.p-result__heading.c-section-heading
+            | 検査の結果を月ごとに分析することで、
+            br
+            | 今後の生活習慣改善に役立てることができます。
+          p.p-result__text 
+            | 道路の位置も幾たびか改まったもので、 
+            br
+            | 古道はいつのまにか深い山間に埋も木曾路はすべて山の中である
+        .p-result__improvement.p-improvement
+          .p-improvement__score 
+            p.p-improvement__score-title 
+              | Brain App 
+              br
+              | １回目
+            .p-improvement__score-point
+              | 62#[span 点]
+          .p-improvement__flow 
+            p.p-improvement__flow-text 
+              | あるところは数十間の深さに臨む木曾。
+            .p-improvement__flow-arrow
+            p.p-improvement__flow-text 
+              | 嶮岨な山坂の多い(名高い桟)
+          .p-improvement__score 
+            p.p-improvement__score-title 
+              | Brain App 
+              br
+              | ２回目
+            .p-improvement__score-point
+                | 88#[span 点]
+        .p-result__img-wrapper 
+          picture.p-result__picture
+            source.p-result__img(srcset="../img/result.webp", type="image/webp")
+            img.p-result__img(src="../img/result.jpg")

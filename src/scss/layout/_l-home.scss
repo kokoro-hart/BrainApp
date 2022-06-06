@@ -10,7 +10,7 @@
 }
 
 .l-home__about {
-  @include clampFunction("padding-top", 769, 1280, 75, 142);
+  @include clampFunction("padding-top", 769, 1280, 52, 105);
   @include clampFunction("padding-bottom", 769, 1280, 58, 118);
 }
 
@@ -25,8 +25,17 @@
 .l-home__scene {
   padding-top: 42px;
   @include clampFunction("padding-bottom", 769, 1280, 86, 172);
-  
+
   @include mq(md) {
     padding-top: 86px;
+  }
+}
+
+.l-home__result {
+  padding-top: 32px;
+  padding-bottom: 52;
+  @include mq(md) {
+    padding-top: 58px;
+    padding-bottom: 99px;
   }
 }
