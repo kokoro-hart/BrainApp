@@ -18,6 +18,7 @@
 
 .p-about__heading {
   margin-top: 12px;
+  @include lh(2);
 
   @include mq(md) {
     margin-top: 18px;
