@@ -53,3 +53,10 @@
     padding-top: 80px;
   }
 }
+
+.l-home__available {
+  border-bottom: 1px solid $color-border;
+  max-width: 1094px;
+  @include clampFunction("padding-top", 769, 1280, 51, 102);
+  @include clampFunction("padding-bottom", 769, 1280, 54, 109);
+}

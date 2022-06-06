@@ -1,0 +1,82 @@
+@use "../global" as *;
+
+/* project .p-available
+    ----------------------------------------------------------------- */
+
+.p-available {
+  max-width: 974px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 20px 0 20px;
+  background-color: $color-accent;
+  color: $color-base;
+}
+
+.p-available__inner {
+  position: relative;
+  border-top: 1px solid $color-accent-thin;
+
+  @include mq(lg) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $color-accent-thin;
+  }
+}
+
+.p-available__content {
+  padding: 17px 17px 27px 17px;
+
+  @include mq(md) {
+    padding: 34px 0 54px 34px;
+  }
+  
+  @include mq(lg) {
+    padding: 63px 0 83px 34px;
+    width: calc(40.5% - 1.6% / 2);
+  }
+}
+
+.p-available__title {
+  color: $color-base;
+}
+
+.p-available__heading {
+  margin-top: 12px;
+  @include fz(18, 24);
+  @include lh(2);
+  letter-spacing: 0.07em;
+  font-weight: 700;
+  white-space: nowrap;
+
+  @include mq(lg) {
+    margin-top: 18px;
+  }
+}
+
+.p-available__picture {
+  position: relative;
+  display: block;
+  padding-left: 17px;
+  padding-right: 17px;
+
+  @include mq(md) {
+    padding-left: 34px;
+    padding-right: 34px;
+  }
+
+  @include mq(lg) {
+    padding-left: 0;
+    width: calc(59.5% - 1.6% / 2);
+  }
+}
