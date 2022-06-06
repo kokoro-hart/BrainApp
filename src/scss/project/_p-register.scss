@@ -1,0 +1,65 @@
+@use "../global" as *;
+
+/* project .p-register
+   ----------------------------------------------------------------- */
+
+.p-register {
+  position: relative;
+  text-align: center;
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: -1;
+    @include clampFunction("width", 769, 1280, 300, 450);
+    @include clampFunction("height", 769, 1280, 300, 450);
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+}
+
+.p-register__inner {
+  max-width: 652px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.p-register__heading {
+  margin-top: 20px;
+
+  @include mq(md) {
+    margin-top: 24px;
+  }
+}
+
+.p-register__text {
+  margin-top: 18px;
+  @include fz(14, 16);
+  @include lh(2);
+  letter-spacing: 0.07em;
+
+  @include mq(md) {
+    margin-top: 24px;
+  }
+}
+
+.p-register__button {
+  display: inline-block;
+  width: 100%;
+  border-radius: 42px;
+  max-width: 340px;
+  margin-top: 42px;
+  padding: 24px 18px;
+  background-color: $color-accent;
+  color: $color-base;
+  @include fz(16, 18);
+  @include lh(1.7);
+  letter-spacing: 0.07em;
+  font-weight: 700;
+
+  @include mq(md) {
+    border-radius: 61px;
+    max-width: 421px;
+    margin-top: 62px;
+    padding: 32px 24px;
+  }
+}

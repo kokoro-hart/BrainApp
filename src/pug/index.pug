@@ -265,16 +265,30 @@ block main
               .p-card-price__text 
                 | 名高い桟も、蔦のかずらを頼みにしたような危い場処ではなくなって、徳川時代の末にはすでに渡ることのできる橋であった
     //- Available ご利用可能端末
-  section.l-home__available.l-container 
-    .p-available
-      .p-available__inner
-        .p-available__content 
-          .p-available__title.c-section-title
-            | Available for Tablets &amp; PCs
-          .p-available__heading 
-            | タブレット、パソコンでも、 
-            br
-            | ご利用いただけます。
-        picture.p-available__picture
-          source.p-available__img(srcset="../img/mock.webp", type="image/webp")
-          img.p-available__img(src="../img/mock.png")
+    section.l-home__available.l-container 
+      .p-available
+        .p-available__inner
+          .p-available__content 
+            .p-available__title.c-section-title
+              | Available for Tablets &amp; PCs
+            .p-available__heading 
+              | タブレット、パソコンでも、 
+              br
+              | ご利用いただけます。
+          picture.p-available__picture
+            source.p-available__img(srcset="../img/mock.webp", type="image/webp")
+            img.p-available__img(src="../img/mock.png")
+    //- Register 会員登録
+    section.p-register.l-home__register.l-container
+      include ./svg/_circle.pug 
+      .p-register__inner
+        p.c-section-title 
+          | Register
+        h2.p-register__heading.c-section-heading 
+          | 会員登録
+        p.p-register__text 
+          | Brain Appをご利用いただくのには、無料の会員登録が必要です。 
+          br
+          | 氏名・年齢・病歴等、簡単な基本情報を入力することで、登録することができます。
+        a.p-register__button 
+          | 会員登録はこちらから
