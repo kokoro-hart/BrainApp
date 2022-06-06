@@ -1,0 +1,67 @@
+@use "../global" as *;
+
+/* project .p-researcher
+   ----------------------------------------------------------------- */
+
+.p-researcher {
+  position: relative;
+  border: 1px solid $color-border;
+  padding: 34px 35px 23px;
+
+  @include mq(sm) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.p-researcher__label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 4px 13px;
+  background-color: $color-accent;
+  color: $color-base;
+  @include fz(14);
+  @include lh(1.7);
+  letter-spacing: 0.07em;
+}
+
+.p-researcher__picture {
+  @include mq(sm) {
+    width: calc(39.77% - 11% / 2);
+  }
+}
+
+.p-researcher__content {
+  margin-top: 24px;
+
+  @include mq(sm) {
+    width: calc(60.23% - 11% / 2);
+    margin-top: 0;
+  }
+}
+
+.p-researcher__role {
+  @include fz(14);
+  @include lh(1.7);
+  letter-spacing: 0.07em;
+}
+
+.p-researcher__name {
+  margin-top: 3px;
+  @include fz(20, 24);
+  @include lh(1.7);
+  letter-spacing: 0.07em;
+  font-weight: 700;
+}
+
+.p-researcher__career {
+  margin-top: 4px;
+  @include fz(12);
+  @include lh(1.8);
+  letter-spacing: 0.07em;
+
+  @include mq(md) {
+    margin-top: 8px;
+  }
+}

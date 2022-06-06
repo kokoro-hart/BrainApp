@@ -1,0 +1,52 @@
+@use "../global" as *;
+
+/* project .p-evidence 
+   ----------------------------------------------------------------- */
+
+.p-evidence__heading {
+  margin-top: 20px;
+
+  @include mq(md) {
+    margin-top: 24px;
+  }
+}
+
+.p-evidence__text {
+  margin-top: 18px;
+  @include fz(14, 16);
+  @include lh(2);
+  letter-spacing: 0.07em;
+
+  @include mq(md) {
+    margin-top: 24px;
+  }
+}
+
+.p-evidence__text-attention {
+  @include fz(14);
+  font-weight: 700;
+}
+
+.p-evidence__items {
+  margin-top: 42px;
+
+  @include mq(lg) {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 84px;
+  }
+}
+
+.p-evidence__item {
+  @include mq(lg) {
+    width: calc(50% - 5% / 2);
+  }
+
+  &:not(:first-child) {
+    margin-top: 40px;
+
+    @include mq(lg) {
+      margin-top: 0;
+    }
+  }
+}

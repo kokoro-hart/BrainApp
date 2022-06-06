@@ -39,3 +39,8 @@
     padding-bottom: 99px;
   }
 }
+
+.l-home__evidence {
+  @include clampFunction("padding-top", 769, 1280, 52, 112);
+  @include clampFunction("padding-bottom", 769, 1280, 58, 129);
+}
