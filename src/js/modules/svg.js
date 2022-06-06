@@ -1,7 +1,7 @@
 import { Ease24, Tween24 } from "tween24";
 
 // パス要素を取得
-const path = document.querySelectorAll(".p-mv__svg path");
+const path = document.querySelectorAll(".fvSvg path");
 
 path.forEach(el => {
   // パスの長さを取得
