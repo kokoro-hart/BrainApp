@@ -160,7 +160,7 @@ block main
             img.p-result__img(src="../img/result.jpg")
     //- Evidence エビデンス
     section.p-evidence.l-home__evidence 
-      .p-evidence__inner.l-container 
+      .l-container 
         p.c-section-title 
           | Evidence 
         h2.p-evidence__heading.c-section-heading 
@@ -210,3 +210,57 @@ block main
                 | 大阪大学大学院 薬化学研究科 
                 br
                 | 薬化学危険教室 准教授
+    //- Price ご利用プラン
+    section.p-price.l-home__price 
+      .l-container 
+        p.c-section-title 
+          | Price 
+        h2.p-price__heading.c-section-heading 
+          | ご利用プラン
+        p.p-price__text 
+          | 名高い桟も、蔦のかずらを頼みにしたような危い。徳川時代の末にはすでに渡ることのできる橋であった。
+          br
+          | (徳川時代の末にはすでに渡ることのできる橋であった。)
+        ul.p-price__cards 
+          li.p-price__card.p-card-price
+            .p-card-price__head
+              p.p-card-price__heading-en 
+                | For Personal
+              h3.p-card-price__heading-ja 
+                | 個人向け
+              p.p-card-price__target
+                | 対象検査：Brain App
+            .p-card-price__body 
+              .p-card-price__detail 
+                p.p-card-price__cost
+                  | #[span.p-card-price__yen ¥]
+                  | #[span.p-card-price__number 550]
+                  | #[span.p-card-price__tax +tax]
+              .p-card-price__text 
+                | 木曾路はすべて山の中である。あるところは岨づたいに行く崖の道であり、あるところは数十間の深さに臨む木曾川の岸であり、あるところは山の尾をめぐる谷の入り口である。
+          li.p-price__card.p-card-price
+            .p-card-price__head
+              p.p-card-price__heading-en 
+                | For Medical Institution
+              h3.p-card-price__heading-ja 
+                | クリニック・病院専用
+              p.p-card-price__target
+                | 対象検査：MPR/CT
+            .p-card-price__body 
+              p.p-card-price__detail 
+                | プランの詳細は#[a.p-card-price__link こちら]
+              .p-card-price__text 
+                | 名高い桟も、蔦のかずらを頼みにしたような危い場処ではなくなって、徳川時代の末にはすでに渡る、#[a.p-card-price__link こちら]よりお問い合わせください。別途お見積りをさせていただきます。
+          li.p-price__card.p-card-price
+            .p-card-price__head
+              p.p-card-price__heading-en 
+                | For Company
+              h3.p-card-price__heading-ja 
+                | 法人のお客さま
+              p.p-card-price__target
+                | 対象検査：Brain App
+            .p-card-price__body 
+              p.p-card-price__detail 
+                | お問い合わせは#[a.p-card-price__link こちら]
+              .p-card-price__text 
+                | 名高い桟も、蔦のかずらを頼みにしたような危い場処ではなくなって、徳川時代の末にはすでに渡ることのできる橋であった

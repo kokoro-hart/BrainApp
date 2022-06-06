@@ -44,3 +44,12 @@
   @include clampFunction("padding-top", 769, 1280, 52, 112);
   @include clampFunction("padding-bottom", 769, 1280, 58, 129);
 }
+
+.l-home__price {
+  padding-top: 42px;
+  @include clampFunction("padding-bottom", 769, 1280, 57, 115);
+
+  @include mq(md) {
+    padding-top: 80px;
+  }
+}

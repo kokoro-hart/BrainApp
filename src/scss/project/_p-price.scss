@@ -1,0 +1,52 @@
+@use "../global" as *;
+
+/* project .p-price
+   ----------------------------------------------------------------- */
+
+.p-price {
+  background-color: $color-gray-thin;
+  text-align: center;
+}
+
+.p-price__heading {
+  margin-top: 20px;
+
+  @include mq(md) {
+    margin-top: 24px;
+  }
+}
+
+.p-price__text {
+  margin-top: 18px;
+  @include fz(14, 16);
+  @include lh(2);
+  letter-spacing: 0.07em;
+
+  @include mq(md) {
+    margin-top: 24px;
+  }
+}
+
+.p-price__cards {
+  margin-top: 38px;
+
+  @include mq(lg) {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+  }
+}
+
+.p-price__card {
+  @include mq(lg) {
+    width: calc(33.3% - 2.7% * 2 / 3);
+  }
+  
+  &:not(:first-child) {
+    margin-top: 40px;
+
+    @include mq(lg) {
+      margin-top: 0;
+    }
+  }
+}

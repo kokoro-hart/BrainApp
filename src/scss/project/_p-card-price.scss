@@ -1,0 +1,98 @@
+@use "../global" as *;
+
+/* project .p-card-price
+   ----------------------------------------------------------------- */
+
+.p-card-price {
+  border: 1px solid $color-border;
+  background-color: $color-base;
+}
+
+.p-card-price__head {
+  background-color: $color-accent;
+  padding: 16px 24px;
+  color: $color-base;
+}
+
+.p-card-price__heading-en {
+  @include fz(12);
+  @include lh(1.7);
+  font-weight: 700;
+  letter-spacing: 0.025em;
+}
+
+.p-card-price__heading-ja {
+  margin-top: 2px;
+  @include fz(18, 20);
+  @include lh(1.7);
+  font-weight: 700;
+  letter-spacing: 0.07em;
+}
+
+.p-card-price__target {
+  margin-top: 4px;
+  @include fz(14);
+  @include lh(1.7);
+  letter-spacing: 0.07em;
+  font-weight: 700;
+  text-decoration: underline;
+
+  @include mq(md) {
+    margin-top: 6px;
+  }
+}
+
+.p-card-price__body {
+  padding: 16px 24px 62px;
+}
+
+.p-card-price__detail {
+  border-bottom: 1px solid $color-border;
+  min-height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.p-card-price__cost {
+  color: $color-accent;
+  display: flex;
+  align-items: flex-end;
+}
+
+.p-card-price__number {
+  @include fz(42, 46);
+  @include lh(1);
+  font-weight: 700;
+}
+
+.p-card-price__yen {
+  @include fz(26, 30);
+  @include lh(1.15);
+}
+
+.p-card-price__tax {
+  @include fz(12);
+  @include lh(1.8);
+  font-weight: 400;
+}
+
+.p-card-price__detail {
+  @include fz(18, 20);
+  @include lh(1.2);
+  letter-spacing: 0.07em;
+  font-weight: 700;
+}
+
+.p-card-price__text {
+  margin-top: 22px;
+  @include fz(14, 15);
+  @include lh(2);
+  letter-spacing: 0.07em;
+  text-align: left;
+}
+
+.p-card-price__link {
+  color: $color-secondary;
+  text-decoration: underline;
+}
