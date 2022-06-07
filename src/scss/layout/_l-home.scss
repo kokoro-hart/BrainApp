@@ -65,3 +65,12 @@
   @include clampFunction("padding-top", 769, 1280, 56, 113);
   @include clampFunction("padding-bottom", 769, 1280, 84, 171);
 }
+
+.l-home__faq {
+  padding-top: 40px;
+  @include clampFunction("padding-bottom", 769, 1280, 62, 121);
+  
+  @include mq(md) {
+    padding-top: 81px;
+  }
+}

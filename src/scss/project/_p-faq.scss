@@ -1,0 +1,111 @@
+@use "../global" as *;
+
+/* project .p-faq
+   ----------------------------------------------------------------- */
+
+.p-faq {
+  text-align: center;
+  background-color: $color-gray-thin;
+}
+
+.p-faq__inner {
+  max-width: 678px;
+}
+
+.p-faq__heading {
+  margin-top: 20px;
+
+  @include mq(md) {
+    margin-top: 2px;
+  }
+}
+
+.p-faq__dl {
+  margin-top: 42px;
+  text-align: left;
+
+  @include mq(md) {
+    margin-top: 68px;
+  }
+}
+
+.p-faq__row {
+  &:not(:first-child) {
+    margin-top: 8px;
+  }
+}
+
+.p-faq__dt {
+  position: relative;
+  background-color: $color-base;
+  @include fz(14, 16);
+  @include lh(1.7);
+  letter-spacing: 0.07em;
+  cursor: pointer;
+  padding: 24px 28px 24px 42px;
+
+  @include mq(md) {
+    padding: 27px 36px 27px 60px;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    right: 18px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    background-color: $color-primary;
+    width: 14px;
+    height: 2px;
+    transition: 0.3s;
+
+    @include mq(md) {
+      right: 20px;
+    }
+  }
+
+  &::after {
+    transform: rotate(90deg);
+  }
+}
+
+.is-active {
+  .p-faq__dt {
+    &::before {
+      transform: rotate(180deg);
+    }
+
+    &::after {
+      transform: rotate(180deg);
+      opacity: 0;
+    }
+  }
+}
+
+.p-faq__dd {
+  @include fz(14, 16);
+  @include lh(1.7);
+  letter-spacing: 0.07em;
+  padding: 24px 28px 24px 42px;
+
+  @include mq(md) {
+    padding: 27px 36px 27px 60px;
+  }
+}
+
+.p-faq__circle {
+  position: absolute;
+  top: 50%;
+  left: 24px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  background-color: $color-accent;
+
+  @include mq(md) {
+    left: 29px;
+  }
+}
