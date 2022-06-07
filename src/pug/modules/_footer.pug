@@ -1,0 +1,35 @@
+footer.l-footer.p-footer
+  .p-footer__inner.l-container 
+    .p-footer__head
+      .p-footer__logo
+        a.p-footer__logo-link(href="/") 
+          include ../svg/_logo.pug
+          span.p-footer__logo-text 
+            | Brain App
+      .p-footer__registration.p-registration
+        button.p-registration__button.p-registration__button--login
+          include ../svg/_login.pug
+          span.p-registration__button-text 
+            | ログイン
+        button.p-registration__button.p-registration__button--member
+          include ../svg/_human.pug
+          span.p-registration__button-text 
+            | 会員登録
+        button.p-registration__button.p-registration__button--mail
+          include ../svg/_mail.pug
+    .p-footer__foot
+      ul.p-footer__rules
+        li.p-footer__rules-item 
+          a.p-footer__rules-link(href="/")
+            | 特商法に基づく表記
+        li.p-footer__rules-item 
+          a.p-footer__rules-link(href="/")
+            | 利用規約
+        li.p-footer__rules-item 
+          a.p-footer__rules-link(href="/")
+            | 個人情報保護方針
+        li.p-footer__rules-item 
+          a.p-footer__rules-link(href="/")
+            | 会社概要
+      p.p-footer__copyright: small(lang="en")
+        | (C) 2022 All rights reserved.

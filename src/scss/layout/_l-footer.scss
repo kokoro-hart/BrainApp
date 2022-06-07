@@ -5,5 +5,10 @@
 
 .l-footer {
   width: 100%;
-  padding: 20px;
+  padding-top: 42px;
+
+  @include mq(md) {
+    padding-top: 78px;
+    padding-bottom: 23px;
+  }
 }

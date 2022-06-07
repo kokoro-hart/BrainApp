@@ -2,3 +2,106 @@
 
 /* project .p-footer
    ----------------------------------------------------------------- */
+
+.p-footer {
+  background-color: $color-base;
+}
+
+.p-footer__head {
+  @include mq(sm) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.p-footer__logo-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include mq(sm) {
+    justify-content: flex-start;
+  }
+  svg {
+    width: 50px;
+
+    @include mq(md) {
+      width: 70px;
+    }
+  }
+}
+
+.p-footer__logo-text {
+  @include fz(24, 32);
+  @include lh(1);
+  color: $color-accent;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  transform: translateY(-2px);
+  margin-left: 8px;
+
+  @include mq(md) {
+    margin-left: 12px;
+  }
+}
+
+.p-footer__registration {
+  margin-top: 24px;
+  justify-content: center;
+
+  @include mq(sm) {
+    justify-content: flex-start;
+    margin-top: 0;
+  }
+}
+
+.p-footer__foot {
+  width: 100%;
+  margin-top: 35px;
+}
+
+.p-footer__rules {
+  text-align: center;
+
+  @include mq(sm) {
+    display: flex;
+    justify-content: center;
+    justify-content: flex-end;
+  }
+}
+
+.p-footer__rules-item {
+  &:not(:first-child) {
+    margin-top: 12px;
+
+    @include mq(sm) {
+      margin-top: 0;
+      margin-left: 40px;
+    }
+  }
+}
+
+.p-footer__rules-link {
+  color: $color-gray;
+  @include fz(12);
+  @include lh(1.7);
+  text-decoration: underline;
+  letter-spacing: 0.07em;
+}
+
+.p-footer__copyright {
+  margin-top: 42px;
+  color: $color-gray;
+  @include fz(12);
+  @include lh(1.7);
+  letter-spacing: 0.07em;
+  text-align: center;
+
+  @include mq(sm) {
+    text-align: right;
+  }
+
+  @include mq(md) {
+    margin-top: 64px;
+  }
+}
