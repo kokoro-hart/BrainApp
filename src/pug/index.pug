@@ -7,15 +7,15 @@ block main
     //- メインビジュアル
     section.p-mv.l-home__mv 
       .p-mv__inner.l-container
-        include ./svg/_circle.pug
-        include ./svg/_circle.pug 
+        include ./svg/_circle01.pug
+        include ./svg/_circle02.pug 
         .p-mv__mockups
           picture.p-mv__mockup.p-mv__mockup--pc
             source.p-mv__img(srcset="../img/mv01.webp", type="image/webp")
-            img.p-mv__img(src="../img/mv01.png")
+            img.p-mv__img(src="../img/mv01.png" alt="BrainApp、pc版の管理画面")
           picture.p-mv__mockup.p-mv__mockup--sp
             source.p-mv__img(srcset="../img/mv02.webp", type="image/webp")
-            img.p-mv__img(src="../img/mv02.png")
+            img.p-mv__img(src="../img/mv02.png" alt="BrainApp、スマホ版の管理画面")
         .p-mv__content 
           h2.p-mv__heading
             | どこにいても、
@@ -45,7 +45,7 @@ block main
         .p-about__graph 
           picture.p-about__picture
             source.p-about__img(srcset="../img/graph.webp", type="image/webp")
-            img.p-about__img(src="../img/graph.png")
+            img.p-about__img(src="../img/graph.png" alt="基礎年齢に対する基礎代謝の推移グラフ（グラフの内容: 年齢を重ねるごとに基礎代謝は減少傾向にある）")
     //- Brain Appの特徴
     section.p-feature.l-home__feature 
       .p-feature__inner.l-container 
@@ -63,7 +63,7 @@ block main
               | 1
             picture.p-feature__card-picture
               source.p-feature__card-img(srcset="../img/feature01.webp", type="image/webp")
-              img.p-feature__card-img(src="../img/feature01.png")
+              img.p-feature__card-img(src="../img/feature01.png" alt="")
             h3.p-feature__card-title 
               | 生活習慣の自動記録
             p.p-feature__card-text
@@ -73,7 +73,7 @@ block main
               | 2
             picture.p-feature__card-picture
               source.p-feature__card-img(srcset="../img/feature02.webp", type="image/webp")
-              img.p-feature__card-img(src="../img/feature02.png")
+              img.p-feature__card-img(src="../img/feature02.png" alt="")
             h3.p-feature__card-title 
               | 月ごとの生活習慣記録
             p.p-feature__card-text
@@ -83,7 +83,7 @@ block main
               | 3
             picture.p-feature__card-picture
               source.p-feature__card-img(srcset="../img/feature03.webp", type="image/webp")
-              img.p-feature__card-img(src="../img/feature03.png")
+              img.p-feature__card-img(src="../img/feature03.png" alt="")
             h3.p-feature__card-title 
               | 医療認定のレポート
             p.p-feature__card-text
@@ -91,7 +91,7 @@ block main
     //- Use Scene 使用シーン
     section.p-scene.l-home__scene
       .p-scene__inner.l-container 
-        include ./svg/_circle.pug 
+        include ./svg/_circle03.pug 
         p.c-section-title 
           | Use Scene
         h2.p-scene__heading.c-section-heading 
@@ -102,19 +102,19 @@ block main
           li.p-scene__card 
             picture.p-scene__card-picture
               source.p-scene__card-img(srcset="../img/use-scene01.webp", type="image/webp")
-              img.p-scene__card-img(src="../img/use-scene01.png")
+              img.p-scene__card-img(src="../img/use-scene01.png" alt="")
             h3.p-scene__card-title
               | 生活習慣病対策施策として
           li.p-scene__card 
             picture.p-scene__card-picture
               source.p-scene__card-img(srcset="../img/use-scene02.webp", type="image/webp")
-              img.p-scene__card-img(src="../img/use-scene02.png")
+              img.p-scene__card-img(src="../img/use-scene02.png" alt="")
             h3.p-scene__card-title
               | ヨガ・ストレッチの一環として
           li.p-scene__card 
             picture.p-scene__card-picture
               source.p-scene__card-img(srcset="../img/use-scene03.webp", type="image/webp")
-              img.p-scene__card-img(src="../img/use-scene03.png")
+              img.p-scene__card-img(src="../img/use-scene03.png" alt="")
             h3.p-scene__card-title
               | アクティブシニア向けの
               br
@@ -157,7 +157,7 @@ block main
         .p-result__img-wrapper 
           picture.p-result__picture
             source.p-result__img(srcset="../img/result.webp", type="image/webp")
-            img.p-result__img(src="../img/result.jpg")
+            img.p-result__img(src="../img/result.jpg" alt="")
     //- Evidence エビデンス
     section.p-evidence.l-home__evidence 
       .l-container 
@@ -181,7 +181,7 @@ block main
               | 共同研究者
             picture.p-researcher__picture
               source.p-researcher__img(srcset="../img/researcher01.webp", type="image/webp")
-              img.p-researcher__img(src="../img/researcher01.png")
+              img.p-researcher__img(src="../img/researcher01.png" alt="木下 幸弘氏の顔写真")
             .p-researcher__content 
               p.p-researcher__role 
                 | 教授(臨床心理学)
@@ -200,7 +200,7 @@ block main
               | 共同研究者
             picture.p-researcher__picture
               source.p-researcher__img(srcset="../img/researcher02.webp", type="image/webp")
-              img.p-researcher__img(src="../img/researcher02.png")
+              img.p-researcher__img(src="../img/researcher02.png" alt="橋本 広助氏の顔写真")
             .p-researcher__content 
               p.p-researcher__role 
                 | 教授(薬化学)
@@ -248,9 +248,9 @@ block main
                 | 対象検査：MPR/CT
             .p-card-price__body 
               p.p-card-price__detail 
-                | プランの詳細は#[a.p-card-price__link こちら]
+                | プランの詳細は#[a.p-card-price__link(href="/") こちら]
               .p-card-price__text 
-                | 名高い桟も、蔦のかずらを頼みにしたような危い場処ではなくなって、徳川時代の末にはすでに渡る、#[a.p-card-price__link こちら]よりお問い合わせください。別途お見積りをさせていただきます。
+                | 名高い桟も、蔦のかずらを頼みにしたような危い場処ではなくなって、徳川時代の末にはすでに渡る、#[a.p-card-price__link(href="/") こちら]よりお問い合わせください。別途お見積りをさせていただきます。
           li.p-price__card.p-card-price
             .p-card-price__head
               p.p-card-price__heading-en 
@@ -261,7 +261,7 @@ block main
                 | 対象検査：Brain App
             .p-card-price__body 
               p.p-card-price__detail 
-                | お問い合わせは#[a.p-card-price__link こちら]
+                | お問い合わせは#[a.p-card-price__link(href="/") こちら]
               .p-card-price__text 
                 | 名高い桟も、蔦のかずらを頼みにしたような危い場処ではなくなって、徳川時代の末にはすでに渡ることのできる橋であった
     //- Available ご利用可能端末
@@ -277,10 +277,10 @@ block main
               | ご利用いただけます。
           picture.p-available__picture
             source.p-available__img(srcset="../img/mock.webp", type="image/webp")
-            img.p-available__img(src="../img/mock.png")
+            img.p-available__img(src="../img/mock.png" alt="スマホとpcのBrain Appの管理画面")
     //- Register 会員登録
     section.p-register.l-home__register.l-container
-      include ./svg/_circle.pug 
+      include ./svg/_circle04.pug 
       .p-register__inner
         p.c-section-title 
           | Register
@@ -290,5 +290,45 @@ block main
           | Brain Appをご利用いただくのには、無料の会員登録が必要です。 
           br
           | 氏名・年齢・病歴等、簡単な基本情報を入力することで、登録することができます。
-        a.p-register__button 
+        a.p-register__button(href="/")
           | 会員登録はこちらから
+    //- FAQ よくある質問
+    section.p-faq.l-home__faq 
+      .p-faq__inner.l-container 
+        p.c-section-title 
+          | FAQ
+        h2.p-faq__heading.c-section-heading 
+          | よくあるご質問
+        dl.p-faq__dl.js-accordion
+          .p-faq__row.js-accordion-item.js-accordion-trigger 
+            dt.p-faq__dt(tabindex="0")
+              span.p-faq__circle
+              | アプリの使い方を教えてください。
+            dd.p-faq__dd.js-accordion-content.u-hidden(aria-expanded="false" aria-hidden="false")
+              | Brain Appをご利用いただくのには、無料の会員登録が必要です。 氏名・年齢・病歴等、簡単な基本情報を入力することで、登録することができます。
+              | Brain Appをご利用いただくのには、無料の会員登録が必要です。 氏名・年齢・病歴等、簡単な基本情報を入力することで、登録することができます。
+              | Brain Appをご利用いただくのには、無料の会員登録が必要です。 氏名・年齢・病歴等、簡単な基本情報を入力することで、登録することができます。
+          .p-faq__row.js-accordion-item.js-accordion-trigger 
+            dt.p-faq__dt(tabindex="0")
+              span.p-faq__circle
+              | Brain Appとは何ですか？
+            dd.p-faq__dd.js-accordion-content.u-hidden(aria-expanded="false" aria-hidden="false")
+              | Brain Appをご利用いただくのには、無料の会員登録が必要です。 氏名・年齢・病歴等、簡単な基本情報を入力することで、登録することができます。
+          .p-faq__row.js-accordion-item.js-accordion-trigger 
+            dt.p-faq__dt(tabindex="0")
+              span.p-faq__circle
+              | MPR/CTとは何ですか？
+            dd.p-faq__dd.js-accordion-content.u-hidden(aria-expanded="false" aria-hidden="false")
+              | Brain Appをご利用いただくのには、無料の会員登録が必要です。 氏名・年齢・病歴等、簡単な基本情報を入力することで、登録することができます。
+          .p-faq__row.js-accordion-item.js-accordion-trigger 
+            dt.p-faq__dt(tabindex="0")
+              span.p-faq__circle
+              | アクティブシニアに向けたおすすめのプランはどれですか？アクティブシニアに向けたおすすめのプランはどれですか？
+            dd.p-faq__dd.js-accordion-content.u-hidden(aria-expanded="false" aria-hidden="false")
+              | Brain Appをご利用いただくのには、無料の会員登録が必要です。 氏名・年齢・病歴等、簡単な基本情報を入力することで、登録することができます。
+          .p-faq__row.js-accordion-item.js-accordion-trigger 
+            dt.p-faq__dt(tabindex="0")
+              span.p-faq__circle
+              | 何歳からBrain Appを利用することができますか？
+            dd.p-faq__dd.js-accordion-content.u-hidden(aria-expanded="false" aria-hidden="false")
+              | Brain Appをご利用いただくのには、無料の会員登録が必要です。 氏名・年齢・病歴等、簡単な基本情報を入力することで、登録することができます。
