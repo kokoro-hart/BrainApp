@@ -5,8 +5,8 @@
 
 .l-home__mv {
   width: 100%;
-  @include clampFunction("padding-top", 769, 1280, 42, 95);
-  @include clampFunction("padding-bottom", 769, 1280, 42, 95);
+  @include clampFunction("padding-top", 769, 1920, 42, 181);
+  @include clampFunction("padding-bottom", 769, 1920, 42, 181);
 }
 
 .l-home__about {
@@ -69,7 +69,7 @@
 .l-home__faq {
   padding-top: 40px;
   @include clampFunction("padding-bottom", 769, 1280, 62, 121);
-  
+
   @include mq(md) {
     padding-top: 81px;
   }

@@ -73,14 +73,14 @@
 }
 
 .p-improvement__score-point {
-  @include fz(42, 54);
-  @include lh(0.8);
+  @include fz(14);
+  @include lh(1);
   letter-spacing: 0.07em;
   font-weight: 700;
 
   span {
-    @include fz(14);
-    @include lh(1);
+    @include fz(42, 54);
+    @include lh(0.8);
   }
 }
 
@@ -119,6 +119,7 @@
   margin: 0 40px;
   background-color: $color-primary;
   transform: rotate(90deg);
+  transition: width 0.6s;
 
   @include mq(sm) {
     transform: none;

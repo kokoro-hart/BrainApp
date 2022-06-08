@@ -5,6 +5,11 @@
 
 /* Layout (prefix: l- )
    ----------------------------------------------------------------- */
+@use "animation/keyframes";
+@use "animation/is-scale-in";
+
+/* Layout (prefix: l- )
+   ----------------------------------------------------------------- */
 @use "layout/l-page-wrapper";
 @use "layout/l-header";
 @use "layout/l-footer";

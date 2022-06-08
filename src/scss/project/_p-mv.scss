@@ -9,6 +9,8 @@
     position: absolute;
     z-index: -1;
     &:nth-of-type(1) {
+      animation: scaleCircle01 1.5s both;
+      animation-delay: 0.3s;
       top: -30%;
       left: 0;
       transform: translate(-50%, -50%) rotate(-90deg);
@@ -25,6 +27,7 @@
       }
     }
     &:nth-of-type(2) {
+      animation: scaleCircle02 1.5s both;
       top: 73%;
       right: 0;
       transform: translateX(50%);
@@ -78,22 +81,34 @@
 }
 
 .p-mv__mockup--pc {
-  top: 0;
+  top: 48%;
+  transform: scale(1, 0);
   @include mq(md) {
     top: 50%;
     left: 0;
-    transform: translateY(-50%);
+    transform: translateY(-50%) scale(1, 0);
   }
 }
 
 .p-mv__mockup--sp {
   top: 0;
   right: -1.5%;
-  transform: translateY(43%);
+  transform: translateY(43%) scale(0, 0);
   width: 26%;
 
   @include mq(md) {
     right: -5.5%;
+  }
+}
+
+.is-active {
+  .p-mv__mockup--pc {
+    animation: scaleInMockUpPc 1s both;
+    animation-delay: 0.1s;
+  }
+
+  .p-mv__mockup--sp {
+    animation: scaleInMockUpSp 0.9s both;
   }
 }
 
@@ -112,12 +127,19 @@
   white-space: nowrap;
 
   span {
-    color: $color-accent;
-    @include clampFunction("font-size", 769, 1280, 28, 38);
+    display: inline-block;
   }
 }
 
+.p-mv__heading-accent {
+  animation: scaleInY 1s both;
+  animation-delay: 0.5s;
+  color: $color-accent;
+  @include clampFunction("font-size", 769, 1280, 28, 38);
+}
+
 .p-mv__lead {
+  display: inline-block;
   position: relative;
   width: 100%;
   margin-top: 4px;

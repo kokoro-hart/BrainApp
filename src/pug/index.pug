@@ -5,7 +5,7 @@ block page
 block main
   main.l-home
     //- メインビジュアル
-    section.p-mv.l-home__mv 
+    section#js-fv-trigger.p-mv.l-home__mv 
       .p-mv__inner.l-container
         include ./svg/_circle01.pug
         include ./svg/_circle02.pug 
@@ -18,11 +18,13 @@ block main
             img.p-mv__img(src="../img/mv02.png" alt="BrainApp、スマホ版の管理画面")
         .p-mv__content 
           h2.p-mv__heading
-            | どこにいても、
+            span.is-scale-in 
+              | どこにいても、
             br.u-hidden-md-down
-            | 誰といても、
+            span.is-scale-in 
+              | 誰といても、
             br
-            span
+            span.p-mv__heading-accent.is-scale-in
               | がん・生活習慣病予防
           p.p-mv__lead
             | 生活習慣予防できるアプリ
@@ -47,7 +49,7 @@ block main
             source.p-about__img(srcset="../img/graph.webp", type="image/webp")
             img.p-about__img(src="../img/graph.png" alt="基礎年齢に対する基礎代謝の推移グラフ（グラフの内容: 年齢を重ねるごとに基礎代謝は減少傾向にある）")
     //- Brain Appの特徴
-    section.p-feature.l-home__feature 
+    section.p-feature.l-home__feature.js-trigger
       .p-feature__inner.l-container 
         p.c-section-title
           | Feature 
@@ -61,30 +63,30 @@ block main
           li.p-feature__card
             span.p-feature__card-number 
               | 1
-            picture.p-feature__card-picture
+            picture.p-feature__card-picture.is-scale-in
               source.p-feature__card-img(srcset="../img/feature01.webp", type="image/webp")
               img.p-feature__card-img(src="../img/feature01.png" alt="")
-            h3.p-feature__card-title 
+            h3.p-feature__card-title.is-scale-in
               | 生活習慣の自動記録
             p.p-feature__card-text
               | 道の狭いところには、木を伐って並べ、藤づるでからめ、それで街道の狭いのを補った。長い間にこの木曾路に起こって来た変化は、いくらかずつでも嶮岨な山坂の多いところを歩きよくした。
           li.p-feature__card
             span.p-feature__card-number 
               | 2
-            picture.p-feature__card-picture
+            picture.p-feature__card-picture.is-scale-in
               source.p-feature__card-img(srcset="../img/feature02.webp", type="image/webp")
               img.p-feature__card-img(src="../img/feature02.png" alt="")
-            h3.p-feature__card-title 
+            h3.p-feature__card-title.is-scale-in
               | 月ごとの生活習慣記録
             p.p-feature__card-text
               | それで街道の狭いのを補った。長い間にこの木曾路に起こって来た変化は、いくらかずつでも嶮岨な山坂の多いところを歩きよくした。
           li.p-feature__card
             span.p-feature__card-number 
               | 3
-            picture.p-feature__card-picture
+            picture.p-feature__card-picture.is-scale-in
               source.p-feature__card-img(srcset="../img/feature03.webp", type="image/webp")
               img.p-feature__card-img(src="../img/feature03.png" alt="")
-            h3.p-feature__card-title 
+            h3.p-feature__card-title.is-scale-in
               | 医療認定のレポート
             p.p-feature__card-text
               | 木を伐って並べ、藤づるでからめ、それで街道の狭いのを補った。長い間にこの木曾路に起こって来た変化は、いくらかずつでも嶮岨な山坂の多いところを歩きよくした。
@@ -133,27 +135,27 @@ block main
             | 道路の位置も幾たびか改まったもので、 
             br
             | 古道はいつのまにか深い山間に埋も木曾路はすべて山の中である
-        .p-result__improvement.p-improvement
+        .p-result__improvement.p-improvement.js-trigger
           .p-improvement__score 
             p.p-improvement__score-title 
               | Brain App 
               br
               | １回目
             .p-improvement__score-point
-              | 62#[span 点]
+              | #[span 62]点
           .p-improvement__flow 
             p.p-improvement__flow-text 
               | あるところは数十間の深さに臨む木曾。
             .p-improvement__flow-arrow
             p.p-improvement__flow-text 
               | 嶮岨な山坂の多い(名高い桟)
-          .p-improvement__score 
+          .p-improvement__score.is-scale-in
             p.p-improvement__score-title 
               | Brain App 
               br
               | ２回目
             .p-improvement__score-point
-                | 88#[span 点]
+                | #[span.js-result-counter(data-num="88") 0]点
         .p-result__img-wrapper 
           picture.p-result__picture
             source.p-result__img(srcset="../img/result.webp", type="image/webp")
@@ -211,7 +213,7 @@ block main
                 br
                 | 薬化学危険教室 准教授
     //- Price ご利用プラン
-    section.p-price.l-home__price 
+    section.p-price.l-home__price
       .l-container 
         p.c-section-title 
           | Price 
@@ -221,7 +223,7 @@ block main
           | 名高い桟も、蔦のかずらを頼みにしたような危い。徳川時代の末にはすでに渡ることのできる橋であった。
           br
           | (徳川時代の末にはすでに渡ることのできる橋であった。)
-        ul.p-price__cards 
+        ul.p-price__cards.js-trigger
           li.p-price__card.p-card-price
             .p-card-price__head
               p.p-card-price__heading-en 
@@ -232,9 +234,9 @@ block main
                 | 対象検査：Brain App
             .p-card-price__body 
               .p-card-price__detail 
-                p.p-card-price__cost
+                p.p-card-price__cost.is-scale-in
                   | #[span.p-card-price__yen ¥]
-                  | #[span.p-card-price__number 550]
+                  | #[span.p-card-price__number.js-price-counter(data-num="550") 0]
                   | #[span.p-card-price__tax +tax]
               .p-card-price__text 
                 | 木曾路はすべて山の中である。あるところは岨づたいに行く崖の道であり、あるところは数十間の深さに臨む木曾川の岸であり、あるところは山の尾をめぐる谷の入り口である。
@@ -279,7 +281,7 @@ block main
             source.p-available__img(srcset="../img/mock.webp", type="image/webp")
             img.p-available__img(src="../img/mock.png" alt="スマホとpcのBrain Appの管理画面")
     //- Register 会員登録
-    section.p-register.l-home__register.l-container
+    section.p-register.l-home__register.l-container.js-trigger
       include ./svg/_circle04.pug 
       .p-register__inner
         p.c-section-title 
@@ -290,7 +292,7 @@ block main
           | Brain Appをご利用いただくのには、無料の会員登録が必要です。 
           br
           | 氏名・年齢・病歴等、簡単な基本情報を入力することで、登録することができます。
-        a.p-register__button(href="/")
+        button.p-register__button.is-scale-in(type="button")
           | 会員登録はこちらから
     //- FAQ よくある質問
     section.p-faq.l-home__faq 

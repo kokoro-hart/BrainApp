@@ -1,0 +1,14 @@
+@use "../global" as *;
+
+/* animation .is-scale-in
+   ----------------------------------------------------------------- */
+
+.is-scale-in {
+  transform: scale(0, 0);
+}
+
+.is-active {
+  .is-scale-in {
+    animation: scaleIn 1s both;
+  }
+}
