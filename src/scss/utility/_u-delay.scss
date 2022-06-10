@@ -1,0 +1,12 @@
+@use "../global" as *;
+
+/* utility .u-delay
+   ----------------------------------------------------------------- */
+
+@for $i from 1 through 3 {
+  .is-active {
+    .u-delay0#{$i} {
+      animation-delay: $i * 0.1s;
+    }
+  }
+}
