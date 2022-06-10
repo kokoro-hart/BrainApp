@@ -1,45 +1,5 @@
 import shuffleNumberCounter from './counter';
 
-const els = document.querySelectorAll('.is-split-text');
-
-const splitText = els.forEach(el => {
-  const str = el.innerHTML.trim().split("");
-  el.innerHTML = str.reduce((acc, curr) => {
-    curr = curr.replace(/\s+/, '&nbsp;');
-    return `${acc}<span class="char">${curr}</span>`;
-  }, "");
-});
-
-
-//const elementsTrigger = document.querySelectorAll('.js-trigger');
-// const elementsScrollObserver = new IntersectionObserver(targetsElements, {
-//   root: null,
-//   rootMargin: '-40% 0px',
-//   threshold: 0
-// });
-
-// elementsTrigger.forEach(target => {
-//   elementsScrollObserver.observe(target);
-// });
-
-// function targetsElements(entries, observer) {
-//   entries.forEach(entry => {
-//     const child = entry.target.children;
-
-//     if (entry.isIntersecting) {
-//       entry.target.classList.add('is-active');
-//       if (resultCounter !== null) {
-//         shuffleNumberCounter(resultCounter, 1100, 0);
-//       }
-//       if (priceCounter !== null) {
-//         shuffleNumberCounter(priceCounter, 1, 300);
-//       }
-//       observer.unobserve(entry.target);
-//     }
-//   });
-// };
-
-
 // intersectionObserver
 class ScrollObserver {
   constructor(elements, callback, options) {
