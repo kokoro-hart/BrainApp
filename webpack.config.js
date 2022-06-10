@@ -164,7 +164,8 @@ templates.forEach((template) => {
       filename: `${fileName}`,
       template: template,
       inject: true, 
-      minify: false //本番環境でも圧縮するか
+      minify: false,
+      favicon: './src/img/favicon.ico',
     }),
   );
 });
