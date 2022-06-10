@@ -1,0 +1,26 @@
+@use "../global" as *;
+
+/* animation .is-split-text
+   ----------------------------------------------------------------- */
+
+.is-split-text {
+  opacity: 0;
+}
+
+.is-active {
+  .is-split-text {
+    opacity: 1;
+
+    .char {
+      display: inline-block;
+
+      @include animation($name: split-texts, $duration: 0.6s, $timing-function: ease(out-quint), $fill-mode: both);
+
+      @for $i from 1 through 10 {
+        &:nth-child(#{$i}) {
+          animation-delay: $i * 0.05s;
+        }
+      }
+    }
+  }
+}

@@ -18,24 +18,24 @@ block main
             img.p-mv__img(src="../img/mv02.png" alt="BrainApp、スマホ版の管理画面")
         .p-mv__content 
           h2.p-mv__heading
-            span.is-scale-in 
+            span
               | どこにいても、
             br.u-hidden-md-down
-            span.is-scale-in 
+            span
               | 誰といても、
             br
-            span.p-mv__heading-accent.is-scale-in
+            span.p-mv__heading-accent
               | がん・生活習慣病予防
           p.p-mv__lead
             | 生活習慣予防できるアプリ
     //- Brain Appについて
-    section.p-about.l-home__about 
-      .p-about__inner.l-container 
-        .p-about__content 
+    section.p-about.l-home__about
+      .p-about__inner.l-container.js-trigger
+        .p-about__content
           p.c-section-title 
             | About Brain App
           h2.p-about__heading.c-section-heading
-            | #[span Brain App]とは、
+            | #[span.is-split-text Brain App]とは、
             br
             | 生活習慣病の早期発見を
             br
@@ -44,28 +44,28 @@ block main
             |  道路の位置も幾たびか改まったもので、 
             br
             | 古道はいつのまにか深い山間に埋も木曾路はすべて山の中である。
-        .p-about__graph 
+        .p-about__graph
           picture.p-about__picture
             source.p-about__img(srcset="../img/graph.webp", type="image/webp")
-            img.p-about__img(src="../img/graph.png" alt="基礎年齢に対する基礎代謝の推移グラフ（グラフの内容: 年齢を重ねるごとに基礎代謝は減少傾向にある）")
+            img.p-about__img(src="../img/graph.png" width="596" height="429" loading="lazy" alt="基礎年齢に対する基礎代謝の推移グラフ（グラフの内容: 年齢を重ねるごとに基礎代謝は減少傾向にある）")
     //- Brain Appの特徴
-    section.p-feature.l-home__feature.js-trigger
-      .p-feature__inner.l-container 
+    section.p-feature.l-home__feature
+      .p-feature__inner.l-container
         p.c-section-title
           | Feature 
-        h2.p-feature__heading.c-section-heading 
-          | #[span Brain App]の特徴
+        h2.p-feature__heading.c-section-heading.js-trigger
+          | #[span.is-split-text Brain App]の特徴
         p.p-feature__text
           | 道路の位置も幾たびか改まったもので、古道はいつのまにか深い山間に埋も木曾路はすべて山の中である。
           br
           | (二十二里余にわたる長い谿谷の間に散在していた)
-        ol.p-feature__cards 
+        ol.p-feature__cards.js-trigger
           li.p-feature__card
             span.p-feature__card-number 
               | 1
             picture.p-feature__card-picture.is-scale-in
               source.p-feature__card-img(srcset="../img/feature01.webp", type="image/webp")
-              img.p-feature__card-img(src="../img/feature01.png" alt="")
+              img.p-feature__card-img(src="../img/feature01.png" width="114" height="107" loading="lazy" alt="")
             h3.p-feature__card-title.is-scale-in
               | 生活習慣の自動記録
             p.p-feature__card-text
@@ -73,50 +73,50 @@ block main
           li.p-feature__card
             span.p-feature__card-number 
               | 2
-            picture.p-feature__card-picture.is-scale-in
+            picture.p-feature__card-picture.is-scale-in.u-delay01
               source.p-feature__card-img(srcset="../img/feature02.webp", type="image/webp")
-              img.p-feature__card-img(src="../img/feature02.png" alt="")
-            h3.p-feature__card-title.is-scale-in
+              img.p-feature__card-img(src="../img/feature02.png" width="114" height="107" loading="lazy" alt="")
+            h3.p-feature__card-title.is-scale-in.u-delay01
               | 月ごとの生活習慣記録
             p.p-feature__card-text
               | それで街道の狭いのを補った。長い間にこの木曾路に起こって来た変化は、いくらかずつでも嶮岨な山坂の多いところを歩きよくした。
           li.p-feature__card
-            span.p-feature__card-number 
+            span.p-feature__card-number
               | 3
-            picture.p-feature__card-picture.is-scale-in
+            picture.p-feature__card-picture.is-scale-in.u-delay02
               source.p-feature__card-img(srcset="../img/feature03.webp", type="image/webp")
-              img.p-feature__card-img(src="../img/feature03.png" alt="")
-            h3.p-feature__card-title.is-scale-in
+              img.p-feature__card-img(src="../img/feature03.png" width="114" height="107" loading="lazy" alt="")
+            h3.p-feature__card-title.is-scale-in.u-delay02
               | 医療認定のレポート
             p.p-feature__card-text
               | 木を伐って並べ、藤づるでからめ、それで街道の狭いのを補った。長い間にこの木曾路に起こって来た変化は、いくらかずつでも嶮岨な山坂の多いところを歩きよくした。
     //- Use Scene 使用シーン
-    section.p-scene.l-home__scene
+    section.p-scene.l-home__scene.js-trigger
       .p-scene__inner.l-container 
         include ./svg/_circle03.pug 
-        p.c-section-title 
+        p.c-section-title
           | Use Scene
-        h2.p-scene__heading.c-section-heading 
-          | #[span アクティブシニア]の方を中心に 
+        h2.p-scene__heading.c-section-heading
+          | #[span.is-split-text アクティブシニア]の方を中心に 
           br.u-hidden-md-down
           | ご利用いただいております
         ul.p-scene__cards
           li.p-scene__card 
             picture.p-scene__card-picture
               source.p-scene__card-img(srcset="../img/use-scene01.webp", type="image/webp")
-              img.p-scene__card-img(src="../img/use-scene01.png" alt="")
+              img.p-scene__card-img(src="../img/use-scene01.png" width="244" height="244" loading="lazy" alt="")
             h3.p-scene__card-title
               | 生活習慣病対策施策として
           li.p-scene__card 
             picture.p-scene__card-picture
               source.p-scene__card-img(srcset="../img/use-scene02.webp", type="image/webp")
-              img.p-scene__card-img(src="../img/use-scene02.png" alt="")
+              img.p-scene__card-img(src="../img/use-scene02.png" width="244" height="243" loading="lazy" alt="")
             h3.p-scene__card-title
               | ヨガ・ストレッチの一環として
           li.p-scene__card 
             picture.p-scene__card-picture
               source.p-scene__card-img(srcset="../img/use-scene03.webp", type="image/webp")
-              img.p-scene__card-img(src="../img/use-scene03.png" alt="")
+              img.p-scene__card-img(src="../img/use-scene03.png" width="244" height="245" loading="lazy" alt="")
             h3.p-scene__card-title
               | アクティブシニア向けの
               br
@@ -135,7 +135,7 @@ block main
             | 道路の位置も幾たびか改まったもので、 
             br
             | 古道はいつのまにか深い山間に埋も木曾路はすべて山の中である
-        .p-result__improvement.p-improvement.js-trigger
+        .p-result__improvement.p-improvement.js-trigger.js-counter-trigger
           .p-improvement__score 
             p.p-improvement__score-title 
               | Brain App 
@@ -159,16 +159,16 @@ block main
         .p-result__img-wrapper 
           picture.p-result__picture
             source.p-result__img(srcset="../img/result.webp", type="image/webp")
-            img.p-result__img(src="../img/result.jpg" alt="")
+            img.p-result__img(src="../img/result.jpg" width="390" height="505" loading="lazy" alt="")
     //- Evidence エビデンス
     section.p-evidence.l-home__evidence 
       .l-container 
         p.c-section-title 
           | Evidence 
-        h2.p-evidence__heading.c-section-heading 
-          | #[span 医療連携]により、 
+        h2.p-evidence__heading.c-section-heading.js-trigger
+          | #[span.is-split-text 医療連携]により、 
           br
-          | #[span 正確で精密]な、安心して利用できる検査。
+          | #[span.is-split-text 正確で精密]な、安心して利用できる検査。
         p.p-evidence__text
           | 木曾十一宿はこの街道に添うて、二十二里余にわたる長い谿谷の間に散在していた。
           br
@@ -182,8 +182,10 @@ block main
             span.p-researcher__label 
               | 共同研究者
             picture.p-researcher__picture
+              source.p-researcher__img(srcset='../img/researcher01@2x.webp' media='(max-width: 767px)' type='image/webp')
+              source.p-researcher__img(srcset='../img/researcher01@2x.png' media='(max-width: 767px)')
               source.p-researcher__img(srcset="../img/researcher01.webp", type="image/webp")
-              img.p-researcher__img(src="../img/researcher01.png" alt="木下 幸弘氏の顔写真")
+              img.p-researcher__img(src="../img/researcher01.png" width="171" height="170" loading="lazy" alt="木下 幸弘氏の顔写真")
             .p-researcher__content 
               p.p-researcher__role 
                 | 教授(臨床心理学)
@@ -201,8 +203,10 @@ block main
             span.p-researcher__label 
               | 共同研究者
             picture.p-researcher__picture
+              source.p-researcher__img(srcset='../img/researcher02@2x.webp' media='(max-width: 767px)' type='image/webp')
+              source.p-researcher__img(srcset='../img/researcher02@2x.png' media='(max-width: 767px)')
               source.p-researcher__img(srcset="../img/researcher02.webp", type="image/webp")
-              img.p-researcher__img(src="../img/researcher02.png" alt="橋本 広助氏の顔写真")
+              img.p-researcher__img(src="../img/researcher02.png" width="171" height="170" loading="lazy" alt="橋本 広助氏の顔写真")
             .p-researcher__content 
               p.p-researcher__role 
                 | 教授(薬化学)
@@ -223,7 +227,7 @@ block main
           | 名高い桟も、蔦のかずらを頼みにしたような危い。徳川時代の末にはすでに渡ることのできる橋であった。
           br
           | (徳川時代の末にはすでに渡ることのできる橋であった。)
-        ul.p-price__cards.js-trigger
+        ul.p-price__cards.js-trigger.js-counter-trigger
           li.p-price__card.p-card-price
             .p-card-price__head
               p.p-card-price__heading-en 
@@ -279,7 +283,7 @@ block main
               | ご利用いただけます。
           picture.p-available__picture
             source.p-available__img(srcset="../img/mock.webp", type="image/webp")
-            img.p-available__img(src="../img/mock.png" alt="スマホとpcのBrain Appの管理画面")
+            img.p-available__img(src="../img/mock.png" width="514" height="251" loading="lazy" alt="スマホとpcのBrain Appの管理画面")
     //- Register 会員登録
     section.p-register.l-home__register.l-container.js-trigger
       include ./svg/_circle04.pug 
@@ -309,7 +313,6 @@ block main
             dd.p-faq__dd.js-accordion-content.u-hidden(aria-expanded="false" aria-hidden="false")
               | Brain Appをご利用いただくのには、無料の会員登録が必要です。 氏名・年齢・病歴等、簡単な基本情報を入力することで、登録することができます。
               | Brain Appをご利用いただくのには、無料の会員登録が必要です。 氏名・年齢・病歴等、簡単な基本情報を入力することで、登録することができます。
-              | Brain Appをご利用いただくのには、無料の会員登録が必要です。 氏名・年齢・病歴等、簡単な基本情報を入力することで、登録することができます。
           .p-faq__row.js-accordion-item.js-accordion-trigger 
             dt.p-faq__dt(tabindex="0")
               span.p-faq__circle
@@ -325,7 +328,7 @@ block main
           .p-faq__row.js-accordion-item.js-accordion-trigger 
             dt.p-faq__dt(tabindex="0")
               span.p-faq__circle
-              | アクティブシニアに向けたおすすめのプランはどれですか？アクティブシニアに向けたおすすめのプランはどれですか？
+              | アクティブシニアに向けたおすすめのプランはどれですか？
             dd.p-faq__dd.js-accordion-content.u-hidden(aria-expanded="false" aria-hidden="false")
               | Brain Appをご利用いただくのには、無料の会員登録が必要です。 氏名・年齢・病歴等、簡単な基本情報を入力することで、登録することができます。
           .p-faq__row.js-accordion-item.js-accordion-trigger 

@@ -6,7 +6,7 @@
 // jsモジュールの読み込み
 import './modules/resize';
 import './modules/fvTrigger';
-import './modules/animation';
+import './modules/scaleAnimation';
 import './modules/intersectionObserver';
 import './modules/accordion';
 
