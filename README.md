@@ -2,9 +2,9 @@
 
 ### 🌐 Site URL
 
-#### **pf-brain-app.site/**  
+#### **https://pf-brain-app.site/**  
 
 ### 🔑Basic Authentication
 
-### id: pf-brain
-### pass: pf-brain@01
+#### id: pf-brain
+#### pass: pf-brain@01
